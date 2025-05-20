@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d0e8ff; /* soft light blue */
+    padding: 16px 24px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .navbar__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #003366; /* dark blue for contrast */
+  }
+  
+  .navbar__cart {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
