@@ -6,7 +6,7 @@ import NavBar from '../../components/nav-bar/nav-bar-component';
 
 function App() {
   return (
-    <Router>
+    <>
       <NavBar />
       <main className="main">
         <Routes>
@@ -14,7 +14,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </main>
-    </Router>
+    </>
   );
 }
 
