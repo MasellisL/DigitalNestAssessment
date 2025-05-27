@@ -6,7 +6,7 @@ import NavBar from '../../components/nav-bar/nav-bar-component';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/DigitalNestAssessment/">
       <NavBar />
       <main className="main">
         <Routes>
