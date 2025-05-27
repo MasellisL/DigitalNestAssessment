@@ -1,28 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'; // 🔑 to get ID from URL
-import { fetchProductById } from '../../api/products'; // function you’ll define
+import { useParams } from 'react-router-dom';
+import { fetchProductById } from '../../api/products';
 import Card from '../../components/card/card-component';
 import BackButton from '../../components/back-button/back-button-component';
 import './product-details.css';
 
 function ProductDetails() {
-  const { id } = useParams(); // 👈 get the product ID from the URL
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchProductById(id)
       .then((data) => {
         setProduct(data);
-        setLoading(false);
       })
       .catch((err) => {
         console.error(err);
-        setLoading(false);
       });
   }, [id]);
 
-  if (loading) return <p>Loading...</p>;
   if (!product) return <p>Product not found.</p>;
 
   return (
